@@ -1,0 +1,18 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store

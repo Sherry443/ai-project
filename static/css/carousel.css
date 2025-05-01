@@ -1,0 +1,63 @@
+/* carousel.css */
+
+/* Ensure the container has enough top padding so the fixed navbar doesn’t overlap */
+body {
+    padding-top: 70px;
+    background: #111;
+  }
+  
+  /* Center the heading */
+  h2.text-center {
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  }
+  
+  /* Give the carousel a dark background and rounded corners */
+  .carousel {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  
+  /* Make each carousel item fill up to a viewport-based height */
+  .carousel-item {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+  
+  /* Style the <img> inside each slide */
+  .carousel-item img {
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+  
+  /* Style the indicator dots */
+  .carousel-indicators [data-bs-target] {
+    background-color: #fff;
+    opacity: 0.7;
+  }
+  .carousel-indicators .active {
+    opacity: 1;
+  }
+  
+  /* Invert the default chevron color for better contrast */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+  
+  /* Add a subtle hover glow to controls */
+  .carousel-control-prev:hover .carousel-control-prev-icon,
+  .carousel-control-next:hover .carousel-control-next-icon {
+    filter: invert(1) brightness(1.2);
+  }
+  

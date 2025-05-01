@@ -1,0 +1,133 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1f1f2e 100%);
+  color: #e5e5e5;
+  scroll-behavior: smooth;
+}
+
+/* Navbar (if reused) */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(10, 10, 15, 0.75) !important;
+}
+.navbar-brand {
+  color: #00e6e6 !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+  color: #ccc !important;
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #00e6e6 !important;
+}
+
+/* Meet Mohammed Hero */
+#meet.hero-section {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../img/hero-bg.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+#meet h1 {
+  font-size: 3rem;
+  color: #00e6e6;
+  text-shadow: 0 0 10px rgba(0, 230, 230, 0.7);
+  margin-bottom: 1rem;
+}
+#meet p.lead {
+  font-size: 1.25rem;
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Chat Section */
+#chat {
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+#chat h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00e6e6;
+  margin-bottom: 2rem;
+}
+.chat-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+#chat-log {
+  list-style: none;
+}
+#chat-log li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+.user-message {
+  text-align: right;
+  color: #00bfff;
+}
+.assistant-message {
+  text-align: left;
+  color: #00e6e6;
+}
+
+/* Input & Button */
+#chat-form .input-group {
+  display: flex;
+}
+#user-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e5e5;
+}
+#user-input::placeholder {
+  color: #aaa;
+}
+#chat-form button {
+  padding: 0 1.5rem;
+  background: #00e6e6;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  color: #111;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+#chat-form button:hover {
+  background: #00cccc;
+  transform: translateY(-2px);
+}
+
+/* Footer Styling for Chat Page (if any) */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #777;
+  font-size: 0.9rem;
+}

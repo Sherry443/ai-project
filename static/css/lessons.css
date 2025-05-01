@@ -1,0 +1,17 @@
+/* lessons.css */
+body {
+    background: #f8f9fa;
+  }
+  .quiz-card {
+    background: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    color: #007bff;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+  }
+  

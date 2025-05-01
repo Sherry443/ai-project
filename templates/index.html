@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mogadishu Travel Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Bootstrap CDN (keep as is) -->
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+      rel="stylesheet">
+  
+    <!-- Custom CSS (Flask) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+    <!-- Favicon (Flask) -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+    <!-- Local CSS files (Flask paths) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chatbot.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/meanmenu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+  </head>
+  
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70" tabindex="0">
+
+ 
+<!-- Header area start -->
+<header class="header-area fixed-top transparent-header">
+  <div class="container header__container">
+    <div class="header__main py-2 d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a class="logo" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='assets/images/talsafar.png') }}" alt="logo">
+      </a>
+
+      <!-- Main Menu -->
+      <nav class="main-menu d-none d-lg-block">
+        <ul class="d-flex gap-4 list-unstyled m-0 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('gallery_carousel') }}">Gallery Carousel</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('itinerary') }}">Itinerary Planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('mohammed') }}">Meet Mohammed</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('lessons') }}">Somali Lessons</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <div class="bars d-block d-lg-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="collapse d-lg-none bg-white" id="mobileNav">
+    <ul class="list-unstyled p-3">
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('gallery_carousel') }}">Gallery Carousel</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('itinerary') }}">Itinerary Planner</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('mohammed') }}">Meet Mohammed</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ url_for('lessons') }}">Somali Lessons</a></li>
+    </ul>
+  </div>
+</header>
+<!-- Header area end -->
+
+   <!-- Banner area start here -->
+   <section class="banner-area">
+ 
+    
+    <div class="swiper banner__slider">
+        <div class="swiper-wrapper" style=" background-color: rgba(0, 0, 0, 0.3);">
+        
+      
+             
+             
+              <div class="slide-bg"
+              style="background-image: url('{{ url_for('static', filename='assets/images/banner aik.png') }}');
+                     height: 100vh;
+                     background-size: cover;
+                     background-position: center;
+                     ">
+         </div>
+         
+
+                <div class="container">
+                    <div class="banner__content" style="max-width: 880px;">
+                        <h4 data-animation="slideInRight" data-duration="2s" data-delay=".3s"
+                            class="text-white mb-20">
+                         
+                    
+                     
+                        </h4>
+                        <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s"
+                            class="text-white">
+                            MOGADISHU TRAVEL GUIDE
+                        </h1>
+                          <p>Explore Mogadishu like never before</p>
+                        <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="about.html"
+                            class="btn-one mt-60">Explore
+                            More <i class="fa-regular fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+      
+    </div>
+    <div class="banner__dot-wrp">
+        <div class="dot-light banner__dot"></div>
+    </div>
+</section>
+<!-- Banner area end here -->
+
+
+  <!-- Hero Section -->
+  <!-- <section id="hero" class="vh-100 d-flex align-items-center justify-content-center text-white hero-section">
+    <div class="text-center container">
+      <h1 class="display-3 fw-bold">MOGADISHU TRAVEL GUIDE</h1>
+      <p class="lead">Explore Mogadishu like never before</p>
+      <a href="#services" class="btn btn-hero">View Services</a>
+    </div>
+  </section> -->
+  <!-- Service area start here -->
+<section class="service-area pt-120 pb-120">
+  <div class="container">
+    <div class="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
+      <div class="section-header">
+        <h5 class="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+          <img class="me-1" src="{{ url_for('static', filename='assets/images/icon/section-title.png') }}" alt="icon">
+          What We OFFER
+        </h5>
+        <h2 class="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Excellent AI Services</h2>
+      </div>
+      <a href="service.html" class="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+        View All Services <i class="fa-regular fa-arrow-right-long"></i>
+      </a>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service 1 -->
+ 
+      <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="00ms" data-wow-duration="1000ms">
+        <div class="service__item">
+          <div class="service-shape">
+            <img src="{{ url_for('static', filename='assets/images/shape/service-item-shape.png') }}" alt="shape">
+          </div>
+          <div class="service__icon">
+            <img src="{{ url_for('static', filename='assets/images/icon/service-icon1.png') }}" alt="icon">
+          </div>
+          <h4><a href="{{ url_for('itinerary') }}">Itinerary Planner</a></h4>
+          <p>
+            Plan seamless journeys with smart scheduling, personalized routes, and flexible stops tailored to your travel style.
+          </p>
+        </div>
+      </div>
+      
+
+      <!-- Service 2 -->
+      <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
+        <div class="service__item active">
+          <div class="service-shape">
+            <img src="{{ url_for('static', filename='assets/images/shape/service-item-shape.png') }}" alt="shape">
+          </div>
+          <div class="service__icon">
+            <img src="{{ url_for('static', filename='assets/images/icon/service-icon2.png') }}" alt="icon">
+          </div>
+          <h4><a href="{{ url_for('lessons') }}">Somali Lessons</a></h4>
+          <p>
+            Dive into a fun and interactive quiz to explore the rich traditions, history, and beautiful language of Somalia!
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+        <div class="service__item">
+          <div class="service-shape">
+            <img src="{{ url_for('static', filename='assets/images/shape/service-item-shape.png') }}" alt="shape">
+          </div>
+          <div class="service__icon">
+            <img src="{{ url_for('static', filename='assets/images/icon/service-icon3.png') }}" alt="icon">
+          </div>
+          <h4><a href="{{ url_for('mohammed') }}">Contact Us</a></h4>
+          <p>
+            Get in Touch With Us – Have questions or need support? Reach out anytime and I team will be happy to assist you!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Service area end here -->
+
+ 
+
+  <!-- Cause area start here -->
+<section class="case-area pt-120 pb-120">
+  <div class="container">
+      <div class="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
+          <div class="section-header">
+              <h5 class="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                  <img class="me-1" src="{{ url_for('static', filename='assets/images/icon/section-title.png') }}" alt="icon">
+                  FROM OUR CASE studies
+              </h5>
+              <h2 class="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">We Provide Best Places</h2>
+          </div>
+          <a href="case.html" class="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+              view All Case <i class="fa-regular fa-arrow-right-long"></i>
+          </a>
+      </div>
+  </div>
+
+  <div class="swiper case__slider">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="case__item">
+                  <div class="image case__image">
+                      <img src="{{ url_for('static', filename='assets/images/somali aik.png') }}" alt="image">
+                  </div>
+                  <div class="case__content">
+                      <span class="primary-color sm-font">Solution</span>
+                      <!-- <h3><a href="case-details.html" class="text-white primary-hover">IT Management</a></h3> -->
+                  </div>
+                  <a href="case-details.html" class="case__btn">
+                      <i class="fa-regular fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="case__item">
+                  <div class="image case__image">
+                      <img src="{{ url_for('static', filename='assets/images/somali do.png') }}" alt="image">
+                  </div>
+                  <div class="case__content">
+                      <span class="primary-color sm-font">Technology</span>
+                      <!-- <h3><a href="case-details.html" class="text-white primary-hover">Platform Integration</a></h3> -->
+                  </div>
+                  <a href="case-details.html" class="case__btn">
+                      <i class="fa-regular fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="case__item">
+                  <div class="image case__image">
+                      <img src="{{ url_for('static', filename='assets/images/somali tin.png') }}" alt="image">
+                  </div>
+                  <div class="case__content">
+                      <span class="primary-color sm-font">Solution</span>
+                      <!-- <h3><a href="case-details.html" class="text-white primary-hover">Web Development</a></h3> -->
+                  </div>
+                  <a href="case-details.html" class="case__btn">
+                      <i class="fa-regular fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="case__item">
+                  <div class="image case__image">
+                      <img src="{{ url_for('static', filename='assets/images/somali char.png') }}" alt="image">
+                  </div>
+                  <div class="case__content">
+                      <span class="primary-color sm-font">Security</span>
+                      <!-- <h3><a href="case-details.html" class="text-white primary-hover">Network Security</a></h3> -->
+                  </div>
+                  <a href="case-details.html" class="case__btn">
+                      <i class="fa-regular fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="mt-60 text-center wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+      <div class="dot case__dot"></div>
+  </div>
+</section>
+<!-- Cause area end here -->
+
+
+  <footer class="footer-area secondary-bg">
+  
+    <div class="footer__copyright">
+        <div class="container">
+            <div class="d-flex align-items-center  justify-content-center w-100">
+                <p class="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2025 by IDIRIS</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- chatbot -->
+ <!-- Floating Chat Button -->
+<div id="chat-toggle-btn" class="chat-toggle">💬</div>
+
+<!-- Chat Widget -->
+<div id="chat-widget" class="chat-widget shadow">
+  <div class="chat-header">
+    <strong>Mohammed</strong>
+    <button id="chat-close-btn" class="btn-close btn-sm"></button>
+  </div>
+  <div class="chat-body">
+    <ul id="chat-log" class="list-unstyled mb-2" style="height: 200px; overflow-y: auto;"></ul>
+    <form id="chat-form">
+      <div class="input-group">
+        <input type="text" id="user-input" class="form-control" placeholder="Type your message..." required>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+ <!-- chatbot end -->
+  <!-- Gallery Section -->
+  <!-- <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title"><h2>Explore Mogadishu’s beauty</h2></div>
+      <div class="row g-3">
+        {% for img in ['hotelmog.jpg','mog.jpg','monks.jpg'] %}
+        <div class="col-sm-6 col-md-4">
+          <img src="{{ url_for('static', filename='images/'+img) }}"
+               class="img-fluid rounded shadow-sm" alt="">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <!-- <section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="section-title"><h2>We're here to assist you!</h2></div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <input class="form-control mb-3" type="text" placeholder="Name" required>
+            <input class="form-control mb-3" type="email" placeholder="Email" required>
+            <input class="form-control mb-3" type="text" placeholder="Phone" required>
+            <textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
+            <button class="btn btn-hero w-100" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery 3.7.1 -->
+<script src="{{ url_for('static', filename='assets/js/jquery-3.7.1.min.js') }}"></script>
+
+<!-- Bootstrap -->
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<!-- Mean Menu -->
+<script src="{{ url_for('static', filename='assets/js/meanmenu.js') }}"></script>
+
+<!-- Swiper -->
+<script src="{{ url_for('static', filename='assets/js/swiper-bundle.min.js') }}"></script>
+
+<!-- Counterup -->
+<script src="{{ url_for('static', filename='assets/js/jquery.counterup.min.js') }}"></script>
+
+<!-- WOW.js -->
+<script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+
+<!-- Pace -->
+<script src="{{ url_for('static', filename='assets/js/pace.min.js') }}"></script>
+
+<!-- Magnific Popup -->
+<script src="{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+
+<!-- Nice Select -->
+<script src="{{ url_for('static', filename='assets/js/nice-select.min.js') }}"></script>
+
+<!-- Isotope -->
+<script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+
+<!-- Waypoints -->
+<script src="{{ url_for('static', filename='assets/js/jquery.waypoints.js') }}"></script>
+
+<!-- Main Script -->
+<script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/chatbot.js') }}"></script>
+
+</body>
+</html>

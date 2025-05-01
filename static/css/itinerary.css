@@ -1,0 +1,47 @@
+/* Futuristic styling for the itinerary page */
+body {
+    background: linear-gradient(135deg, #0e0e0e 0%, #1e1e1e 100%);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.5s ease;
+  }
+  
+  .futuristic-heading {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+  }
+  
+  .questionnaire-container {
+    margin-top: 80px;
+    max-width: 600px;
+  }
+  
+  .question-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  .question-content input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+  
+  .result {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .itinerary-output {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+  
